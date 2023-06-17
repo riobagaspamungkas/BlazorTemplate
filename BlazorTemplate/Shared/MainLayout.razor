@@ -2,18 +2,22 @@
 
 <PageTitle>BlazorTemplate</PageTitle>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+<!-- Left Panel -->
+<aside id="left-panel" class="left-panel">
+    <NavMenu />
+</aside>
+<!-- /#left-panel -->
+<!-- Right Panel -->
+<div id="right-panel" class="right-panel">
+    <!-- Header-->
+    <HeaderSection></HeaderSection>
+    <!-- /#header -->
+    <!-- Content -->
+    @Body
+    <!-- /.content -->
+    <div class="clearfix"></div>
+    <!-- Footer -->
+    <FooterSection></FooterSection>
+    <!-- /.site-footer -->
 </div>
+<!-- /#right-panel -->
