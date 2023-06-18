@@ -6,12 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Shared\HeaderSections.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Shared\HeaderSections.razor" />
-  </ItemGroup>
-
 </Project>
