@@ -6,6 +6,8 @@
     bool isChartsPeity = NavigationManager.Uri.Contains("/charts-peity");
     bool isTableData = NavigationManager.Uri.Contains("/tables-data");
     bool isFormsAdvanced = NavigationManager.Uri.Contains("/forms-advanced");
+    bool isMapsGmap = NavigationManager.Uri.Contains("/maps-gmap");
+    bool isMapsVector = NavigationManager.Uri.Contains("/maps-vector");
 }
 
 @using Microsoft.AspNetCore.Components.Web
@@ -42,7 +44,6 @@
     <link rel="stylesheet" href="css/lib/chosen/chosen.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
 
     <style>
         #weatherWidget .currentDesc {
@@ -112,6 +113,37 @@
                 });
             });
         </script>
+    }
+
+    @if (isMapsGmap)
+    {
+        <!-- Gmaps -->
+        <!--<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2jlT6C_to6X1mMvR9yRWeRvpIgTXgddM"></script>
+
+        <script src="js/lib/gmap/gmaps.js"></script>
+        <script src="js/init/gmap-init.js"></script>
+    }
+
+    @if (isMapsVector)
+    {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jquery.vmap.min.js"></script>
+        <script src="js/vmap.sampledata.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.world.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.algeria.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.argentina.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.brazil.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.france.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.germany.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.greece.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.iran.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.iraq.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.russia.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.tunisia.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.europe.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.usa.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.turkey.js"></script>
+        <script src="js/init/vector-init.js"></script>
     }
 
     <!--  Chart js -->
